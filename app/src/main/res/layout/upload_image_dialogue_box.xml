@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center">
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageUploadprogress"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="35dp"
+        android:elevation="50dp"
+        app:cardCornerRadius="10dp"
+        android:id="@+id/imageUploadDialogue"
+        android:backgroundTint="@color/black"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:padding="10dp"
+                android:gravity="center"
+                android:text="Select Image From"
+                android:textSize="30dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_margin="10dp">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gallery"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:textSize="20dp"
+                    android:padding="10dp"
+                    android:id="@+id/chooseImageGallery"
+                    />
+                <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                    android:id="@+id/chooseImageCamera"
+                android:text="Camera"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:textSize="20dp"
+                />
+
+            </LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Done"
+                android:textSize="20dp"
+                android:id="@+id/DoneUploadImage"
+                android:padding="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditUserProfile"
+
+    android:background="#000">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#000"
+        android:orientation="vertical"
+        android:id="@+id/profilepicupperLayout"
+        android:gravity="center"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/EditProfileImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/snowman"
+            app:civ_border_color="#fff"
+            app:civ_border_width="2dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/EditUserEditImageTV"
+            android:text="EditImage"
+            android:textSize="30dp"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/profilepicupperLayout"
+        android:orientation="vertical"
+        app:cardBackgroundColor="#fff"
+        app:cardCornerRadius="20dp"
+        android:elevation="20dp"
+        android:layout_marginBottom="-20dp"
+        android:gravity="center"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            >
+            <EditText
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/EditProfileName"
+                android:ems="10"
+                android:textSize="25dp"
+                android:hint="Name"
+                android:inputType="text"
+                />
+
+            <EditText
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:id="@+id/EditProfileBio"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="Bio"
+                android:inputType="text"
+                android:textSize="25dp"/>
+
+
+            <EditText
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:id="@+id/EditProfileDOB"
+                android:hint="Date Of Birth"
+                android:inputType="text"
+                android:textSize="25dp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update"
+                android:textSize="25dp"
+                android:layout_margin="20dp"
+                android:id="@+id/EditProfileUpdateButton"
+                />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

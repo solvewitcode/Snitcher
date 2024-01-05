@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "251194833991",
+    "project_id": "snitcher-f3457",
+    "storage_bucket": "snitcher-f3457.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251194833991:android:21982706fe55cc93f44562",
+        "android_client_info": {
+          "package_name": "com.example.snitcher"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjzvTG7FxokkUQfSd2KrzWlesokJYZhrE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
