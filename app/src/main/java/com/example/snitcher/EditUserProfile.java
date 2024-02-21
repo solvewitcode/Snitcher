@@ -107,7 +107,6 @@ public class EditUserProfile extends AppCompatActivity {
                 gallery.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Toast.makeText(getApplicationContext(),"Gallery",Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent();
                         intent.setType("image/*");
                         intent.setAction(Intent.ACTION_GET_CONTENT);

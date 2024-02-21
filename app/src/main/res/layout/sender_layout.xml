@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    >
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profilerggg"
@@ -11,7 +13,7 @@
         android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
         android:layout_margin="10dp"
-        android:elevation="100dp"
+        android:elevation="50dp"
         />
 
     <TextView
@@ -25,11 +27,18 @@
         android:layout_marginBottom="5dp"
         android:layout_toLeftOf="@id/profilerggg"
         android:background="@drawable/sender_message_shape"
-        android:fontFamily="@font/monterey"
+        android:fontFamily="@font/poppins_light"
         android:padding="7dp"
         android:text="Hello"
         android:textSize="20dp"
-
         android:textColor="@color/white"
         android:textStyle="bold" />
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:layout_toLeftOf="@+id/profilerggg"
+        android:id="@+id/iv_sender"
+        android:visibility="gone"
+        />
 </RelativeLayout>

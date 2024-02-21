@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="wrap_content"
     android:background="@color/black">
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:text="Snitch"
         android:textColor="#7D0000"
-        android:textSize="100dp"
+        android:textSize="90dp"
         android:textStyle="bold"
-        android:fontFamily="@font/titilliumweb"
+        android:fontFamily="@font/poppins_bold"
+        android:shadowDy="5"
+        android:shadowDx="5"
+        android:shadowColor="@color/white"
+        android:shadowRadius="20"
         android:padding="10dp"
         android:gravity="center"/>
 </LinearLayout>

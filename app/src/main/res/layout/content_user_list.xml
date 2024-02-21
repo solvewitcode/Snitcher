@@ -28,10 +28,10 @@
             android:id="@+id/content_username"
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:text="NAME"
-            android:textSize="20dp"
-            android:fontFamily="@font/montereybold"
+            android:textSize="25dp"
+            android:fontFamily="@font/poppins_bold"
             android:textStyle="bold"
             android:textColor="#CD5900"
             />

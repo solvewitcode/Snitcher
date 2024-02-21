@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:fontFamily="@font/titilliumweb"
+        android:fontFamily="@font/poppins_bold"
         android:padding="10dp"
         android:shadowColor="#6DFF0000"
         android:shadowDx="5"
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
-        android:fontFamily="sans-serif-black"
+        android:fontFamily="@font/poppins_bold"
         android:padding="10dp"
         android:text="Log In"
         android:textColor="#7D0000"
@@ -87,7 +87,10 @@
                     android:id="@+id/uemail"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="textEmailAddress" />
+                    android:inputType="textEmailAddress"
+                    android:fontFamily="@font/poppins_light"
+                    android:textStyle="bold"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -105,7 +108,10 @@
                     android:id="@+id/upassword"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    android:fontFamily="@font/poppins_light"
+                    android:textStyle="bold"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
@@ -116,7 +122,9 @@
                 android:layout_marginTop="25dp"
                 android:layout_marginRight="10dp"
                 android:backgroundTint="#7D0000"
-                android:padding="3dp"
+                android:fontFamily="@font/poppins_light"
+                android:textStyle="bold"
+                android:elevation="20dp"
                 android:text="Log in"
                 android:textSize="20dp" />
 
@@ -135,7 +143,9 @@
                 android:text="Don't have an account?"
                 android:textColor="#304FFE"
                 android:textSize="20dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_light"
+                />
         </LinearLayout>
 
 

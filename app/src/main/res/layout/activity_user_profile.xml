@@ -36,7 +36,9 @@
             android:layout_margin="10dp"
             android:text="Person name"
             android:id="@+id/userProfileName"
+            android:fontFamily="@font/poppins_bold"
             android:textSize="30dp"
+            android:padding="5dp"
             android:gravity="center"
             />
         <TextView
@@ -45,7 +47,9 @@
             android:text="Email"
             android:layout_margin="10dp"
             android:id="@+id/userProfileEmail"
+            android:fontFamily="@font/poppins_bold"
             android:textSize="30dp"
+            android:padding="5dp"
             android:gravity="center"/>
     </LinearLayout>
 
@@ -75,6 +79,8 @@
                 android:layout_marginLeft="5dp"
                 android:textSize="30dp"
                 android:layout_marginRight="5dp"
+                android:fontFamily="@font/poppins_light"
+                android:textStyle="bold"
                 android:layout_margin="10dp"
                 android:elevation="10dp"
                 android:text="Edit Profile"
@@ -89,6 +95,8 @@
                 android:layout_margin="10dp"
                 android:elevation="10dp"
                 android:text="Something..."
+                android:fontFamily="@font/poppins_light"
+                android:textStyle="bold"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -100,6 +108,8 @@
                 android:layout_margin="10dp"
                 android:elevation="10dp"
                 android:text="Something..."
+                android:fontFamily="@font/poppins_light"
+                android:textStyle="bold"
                 />
         </LinearLayout>
 

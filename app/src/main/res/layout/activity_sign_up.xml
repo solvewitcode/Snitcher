@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:fontFamily="@font/titilliumweb"
+        android:fontFamily="@font/poppins_bold"
         android:padding="10dp"
         android:shadowColor="#6DFF0000"
         android:shadowDx="5"
@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
-        android:fontFamily="sans-serif-black"
+        android:fontFamily="@font/poppins_bold"
         android:padding="10dp"
         android:text="Sign Up"
         android:textColor="#7D0000"
@@ -82,6 +82,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="text"
+                    android:fontFamily="@font/poppins_light"
+                    android:textStyle="bold"
                     android:id="@+id/uname"
                     />
             </com.google.android.material.textfield.TextInputLayout>
@@ -102,6 +104,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="textEmailAddress"
+                    android:fontFamily="@font/poppins_light"
+                    android:textStyle="bold"
                     />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -121,6 +125,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="textPassword"
+                    android:fontFamily="@font/poppins_light"
+                    android:textStyle="bold"
                     />
             </com.google.android.material.textfield.TextInputLayout>
 

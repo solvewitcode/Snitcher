@@ -1,13 +1,19 @@
 package com.example.snitcher;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Dialog;
+import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -40,6 +46,8 @@ public class ChattingActivity extends AppCompatActivity {
     ArrayList<MessageModel> messageArrayList;
     MessagesAdapter messagesAdapter;
     String senderId;
+    Uri uri;
+    String recieverId,recieverName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,15 +64,16 @@ public class ChattingActivity extends AppCompatActivity {
         messagesAdapter= new MessagesAdapter(ChattingActivity.this,messageArrayList);
         binding.chatRecyclerView.setAdapter(messagesAdapter);
 
-        String recieverId=getIntent().getStringExtra("userId");
+        recieverId=getIntent().getStringExtra("userId");
         String recieverimage=getIntent().getStringExtra("profilePic");
-        String recieverName=getIntent().getStringExtra("userName");
+        recieverName=getIntent().getStringExtra("userName");
 
         if (auth.getCurrentUser().getUid()!=null) {
             senderId = auth.getCurrentUser().getUid();
         }
-        System.out.println(senderId);
-        System.out.println(recieverId);
+
+//        System.out.println(senderId);
+//        System.out.println(recieverId);
         senderRoom=senderId+recieverId;
         recieverRoom=recieverId+senderId;
 
@@ -118,7 +127,7 @@ public class ChattingActivity extends AppCompatActivity {
                 }
                 binding.writeMessage.setText("");
                 Date date = new Date();
-                MessageModel messageModel=new MessageModel(message,senderId,date.getTime());
+                MessageModel messageModel=new MessageModel(message,senderId,date.getTime(),"text");
                 database=FirebaseDatabase.getInstance();
                 database.getReference().child("chats").child(senderRoom).child("messages")
                         .push().setValue(messageModel).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -135,5 +144,61 @@ public class ChattingActivity extends AppCompatActivity {
                         });
             }
         });
+       binding.chatCameraIcon.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               Dialog dialog = new Dialog(ChattingActivity.this);
+               dialog.setContentView(R.layout.upload_image_dialogue_box);
+               dialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
+               dialog.show();
+               Button gallery=dialog.findViewById(R.id.chooseImageGallery);
+               Button camera=dialog.findViewById(R.id.chooseImageCamera);
+               Button done=dialog.findViewById(R.id.DoneUploadImage);
+               gallery.setOnClickListener(new View.OnClickListener() {
+                   @Override
+                   public void onClick(View view) {
+                       Toast.makeText(getApplicationContext(),"Gallery",Toast.LENGTH_SHORT).show();
+                       Intent intent = new Intent();
+                       intent.setType("image/*");
+                       intent.setAction(Intent.ACTION_GET_CONTENT);
+                       startActivityForResult(Intent.createChooser(intent,"Select Picture"),10);
+
+                   }
+               });
+               camera.setOnClickListener(new View.OnClickListener() {
+                   @Override
+                   public void onClick(View view) {
+                       Toast.makeText(getApplicationContext(),"Camera",Toast.LENGTH_SHORT).show();
+                   }
+               });
+               done.setOnClickListener(new View.OnClickListener() {
+                   @Override
+                   public void onClick(View view) {
+                       dialog.dismiss();
+                   }
+               });
+           }
+       });
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode==10)
+        {
+            if (data!=null)
+            {
+                uri = data.getData();
+                String url= null;
+                if (uri != null) {
+                    url = uri.toString();
+                }
+                Intent intent1=new Intent(ChattingActivity.this, SendImage.class);
+                intent1.putExtra("u",url);
+                intent1.putExtra("n",recieverName);
+                intent1.putExtra("ruid",recieverId);
+                intent1.putExtra("suid",senderId);
+                startActivity(intent1);
+            }
+        }
     }
 }

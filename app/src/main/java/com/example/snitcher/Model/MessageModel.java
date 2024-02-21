@@ -4,14 +4,25 @@ public class MessageModel {
     String message;
     String senderId;
     long timeStamp;
+    String type;
 
-    public MessageModel() {
+    public String getType() {
+        return type;
     }
 
-    public MessageModel(String message, String senderId, long timeStamp) {
+    public void setType(String type) {
+        this.type = type;
+    }
+
+
+    public MessageModel(String message, String senderId, long timeStamp, String type) {
         this.message = message;
         this.senderId = senderId;
         this.timeStamp = timeStamp;
+        this.type = type;
+    }
+
+    public MessageModel() {
     }
 
     public String getMessage() {

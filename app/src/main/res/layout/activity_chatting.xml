@@ -33,11 +33,11 @@
             android:id="@+id/chattingScreenRecieverName"
             android:text="Name"
             android:gravity="center"
-            android:textSize="30dp"
             android:layout_marginLeft="10dp"
-            android:padding="10dp"
+            android:padding="15dp"
+            android:textSize="20dp"
             android:textColor="#fff"
-            android:fontFamily="@font/square"
+            android:fontFamily="@font/poppins_bold"
             />
     </LinearLayout>
 
@@ -53,37 +53,63 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:id="@+id/LinearSendMessage"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:layout_margin="10dp"
-        android:weightSum="40"
+        android:layout_margin="5dp"
         >
-        <LinearLayout
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@drawable/camera_icon"
+            android:id="@+id/chatCameraIcon"
+            />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@drawable/mic_icon"
+            android:id="@+id/chatMicIcon"
+            />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardElevation="20dp"
+            android:layout_weight="35"
+            android:backgroundTint="#71797E"
+            app:cardCornerRadius="20dp"
+            >
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:elevation="50dp"
             android:layout_weight="35"
             >
+
             <EditText
+                android:id="@+id/writeMessage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/writeMessage"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/poppins_light"
                 android:hint="Send Message"
-                android:background="@drawable/sendmessagebackground"
-                android:textSize="20dp"
+                android:padding="5dp"
                 android:textColor="#fff"
                 android:textColorHint="#fff"
-                android:padding="10dp"
-                />
-        </LinearLayout>
-        <ImageButton
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/SendButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/roundshapebackground"
+            android:background="#FF5252"
             android:src="@drawable/send_svgrepo_com"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="5"
+            android:layout_marginLeft="5dp"
             android:padding="5dp"
             android:elevation="5dp"
             />

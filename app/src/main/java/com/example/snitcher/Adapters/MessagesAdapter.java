@@ -8,6 +8,7 @@ import android.net.wifi.rtt.RangingResult;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -54,13 +55,29 @@ public class MessagesAdapter extends RecyclerView.Adapter {
         if (holder.getClass()==senderViewHolder.class)
         {
             senderViewHolder viewHolder = (senderViewHolder) holder;
-            viewHolder.msgtxt.setText(messageModel.getMessage());
+            if (messageModel.getType().equals("text")) {
+                viewHolder.msgtxt.setText(messageModel.getMessage());
+            }
+            if (messageModel.getType().equals("image"))
+            {
+                viewHolder.msgtxt.setVisibility(View.GONE);
+                viewHolder.iv_sender.setVisibility(View.VISIBLE);
+                Picasso.get().load(messageModel.getMessage()).into(viewHolder.iv_sender);
+            }
             Picasso.get().load(senderImg).into(viewHolder.circleImageView);
         }
         else
         {
             recieverViewHolder viewHolder = (recieverViewHolder) holder;
-            viewHolder.msgtxt.setText(messageModel.getMessage());
+            if (messageModel.getType().equals("text")) {
+                viewHolder.msgtxt.setText(messageModel.getMessage());
+            }
+            if (messageModel.getType().equals("image"))
+            {
+                viewHolder.msgtxt.setVisibility(View.GONE);
+                viewHolder.iv_reciever.setVisibility(View.VISIBLE);
+                Picasso.get().load(messageModel.getMessage()).into(viewHolder.iv_reciever);
+            }
             Picasso.get().load(recieverIImg).into(viewHolder.circleImageView);
         }
     }
@@ -86,19 +103,23 @@ public class MessagesAdapter extends RecyclerView.Adapter {
     class senderViewHolder extends RecyclerView.ViewHolder{
         CircleImageView circleImageView;
         TextView msgtxt;
+        ImageView iv_sender;
         public senderViewHolder(@NonNull View itemView) {
             super(itemView);
             circleImageView=itemView.findViewById(R.id.profilerggg);
             msgtxt=itemView.findViewById(R.id.msgsendertyp);
+            iv_sender=itemView.findViewById(R.id.iv_sender);
         }
     }
     class recieverViewHolder extends  RecyclerView.ViewHolder{
         CircleImageView circleImageView;
         TextView msgtxt;
+        ImageView iv_reciever;
         public recieverViewHolder(@NonNull View itemView) {
             super(itemView);
             circleImageView=itemView.findViewById(R.id.pro);
             msgtxt=itemView.findViewById(R.id.recivertextset);
+            iv_reciever=itemView.findViewById(R.id.iv_reciever);
         }
     }
 }

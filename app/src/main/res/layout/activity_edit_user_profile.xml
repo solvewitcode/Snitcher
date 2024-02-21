@@ -29,6 +29,7 @@
             android:id="@+id/EditUserEditImageTV"
             android:text="EditImage"
             android:textSize="30dp"
+            android:fontFamily="@font/poppins_bold"
             android:layout_margin="10dp"
             android:padding="5dp"
             android:gravity="center"
@@ -53,40 +54,66 @@
             android:gravity="center"
             android:layout_margin="10dp"
             >
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/EditProfileName"
                 android:ems="10"
-                android:textSize="25dp"
                 android:hint="Name"
+                android:fontFamily="@font/poppins_bold"
                 android:inputType="text"
-                />
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/EditProfileName"
+                    android:fontFamily="@font/poppins_light"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:inputType="text"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:id="@+id/EditProfileBio"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:ems="10"
                 android:hint="Bio"
+                android:fontFamily="@font/poppins_bold"
                 android:inputType="text"
-                android:textSize="25dp"/>
+                android:textSize="25dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/EditProfileBio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:inputType="text"
+                    android:textSize="20dp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
 
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:ems="10"
-                android:id="@+id/EditProfileDOB"
                 android:hint="Date Of Birth"
                 android:inputType="text"
-                android:textSize="25dp"
-                />
+                android:fontFamily="@font/poppins_bold"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="20dp"
+                    android:inputType="text"
+                    android:id="@+id/EditProfileDOB"
+                    android:fontFamily="@font/poppins_bold"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

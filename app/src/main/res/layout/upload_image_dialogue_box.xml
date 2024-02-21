@@ -29,6 +29,8 @@
                 android:textColor="@color/white"
                 android:padding="10dp"
                 android:gravity="center"
+                android:fontFamily="@font/poppins_light"
+                android:textStyle="bold"
                 android:text="Select Image From"
                 android:textSize="30dp"
                 />
