@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
-
    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EditUserProfile"
-
-    android:background="#000">
+    android:background="#FF5252">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:background="#000"
+        android:background="#FF5252"
         android:orientation="vertical"
         android:id="@+id/profilepicupperLayout"
         android:gravity="center"
@@ -126,12 +123,12 @@
                     />
             </com.google.android.material.textfield.TextInputLayout>
             <Button
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Update"
                 android:textSize="25dp"
-                android:layout_margin="20dp"
                 android:id="@+id/EditProfileUpdateButton"
+                android:layout_marginTop="10dp"
                 android:backgroundTint="@color/SecondaryDark"
                 />
         </LinearLayout>

@@ -4,63 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserProfile"
+    tools:context=".User_Profile"
     android:background="@color/PrimaryDark">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="400dp"
-    android:background="@color/PrimaryDark"
-    android:orientation="vertical"
-    android:id="@+id/profilepicupperLayout"
-    android:gravity="center"
-    >
-    <de.hdodenhof.circleimageview.CircleImageView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/profile_image"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@drawable/snowman"
-        app:civ_border_width="2dp"
-        android:layout_margin="20dp"
-        app:civ_border_color="#fff"/>
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="400dp"
+        android:background="@color/PrimaryDark"
         android:orientation="vertical"
-        android:layout_gravity="center"
+        android:id="@+id/profilepicupperLayout"
+        android:gravity="center"
         >
-        <TextView
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/snowman"
+            app:civ_border_width="2dp"
+            android:layout_margin="20dp"
+            app:civ_border_color="#fff"/>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="Person name"
-            android:id="@+id/userProfileName"
-            android:fontFamily="@font/poppins_bold"
-            android:textSize="30dp"
-            android:padding="5dp"
-            android:gravity="center"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Email"
-            android:layout_margin="10dp"
-            android:id="@+id/userProfileEmail"
-            android:fontFamily="@font/poppins_bold"
-            android:textSize="30dp"
-            android:padding="5dp"
-            android:gravity="center"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Person name"
+                android:id="@+id/userProfileName"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="30dp"
+                android:padding="5dp"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:layout_margin="10dp"
+                android:id="@+id/userProfileEmail"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="30dp"
+                android:padding="5dp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+
     </LinearLayout>
-
-
-</LinearLayout>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/profilepicupperLayout"
         android:orientation="vertical"
-        app:cardBackgroundColor="#FF5252"
+        app:cardBackgroundColor="#FAFF5252"
         app:cardCornerRadius="20dp"
         android:elevation="20dp"
         android:layout_marginBottom="-20dp"

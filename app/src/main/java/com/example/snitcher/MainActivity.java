@@ -63,7 +63,8 @@ public class MainActivity extends AppCompatActivity {
                 int id =item.getItemId();
                 if (id==R.id.myProfile)
                 {
-                    Intent intent = new Intent(MainActivity.this,UserProfile.class);
+                    Toast.makeText(MainActivity.this, "My Profile clicked", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this,User_Profile.class);
                     startActivity(intent);
                 }
                 if (id==R.id.vrcontent)

@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.snitcher.Model.UserModel;
-import com.example.snitcher.databinding.ActivityUserProfileBinding;
+import com.example.snitcher.databinding.ActivityUserProfile2Binding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -16,15 +16,16 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class UserProfile extends AppCompatActivity {
+public class User_Profile extends AppCompatActivity {
     FirebaseAuth auth;
     FirebaseDatabase database;
     DatabaseReference reference;
-    ActivityUserProfileBinding binding;
+    ActivityUserProfile2Binding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding=ActivityUserProfileBinding.inflate(getLayoutInflater());
+        setContentView(R.layout.activity_user_profile2);
+        binding= ActivityUserProfile2Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         database=FirebaseDatabase.getInstance();
         auth=FirebaseAuth.getInstance();
@@ -47,7 +48,7 @@ public class UserProfile extends AppCompatActivity {
         binding.userProfileEditProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(UserProfile.this,EditUserProfile.class);
+                Intent intent = new Intent(User_Profile.this,EditUserProfile.class);
                 intent.putExtra("userName",user1[0].getUserName());
                 intent.putExtra("Email",user1[0].getMail());
                 intent.putExtra("password",user1[0].getPassword());
