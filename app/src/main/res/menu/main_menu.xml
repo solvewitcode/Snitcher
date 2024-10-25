@@ -2,6 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 <group android:checkableBehavior="single">
         <item android:id="@+id/myProfile" android:title="My Profile"/>
+        <item android:id="@+id/vrcontent" android:title="VR Content"/>
         <item android:id="@+id/settings" android:title="Settings"/>
         <item android:id="@+id/groupChat" android:title="Group Chat"/>
         <item android:id="@+id/logOut" android:title="Log Out"/>

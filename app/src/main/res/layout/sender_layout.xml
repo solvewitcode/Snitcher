@@ -34,9 +34,8 @@
         android:textColor="@color/white"
         android:textStyle="bold" />
     <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:scaleType="centerCrop"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_toLeftOf="@+id/profilerggg"
         android:id="@+id/iv_sender"
         android:visibility="gone"
