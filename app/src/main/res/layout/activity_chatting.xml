@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ChattingActivity"
-    android:background="#FF5252"
+    android:background="@color/PrimaryDark"
     >
     <LinearLayout
         android:layout_width="match_parent"
@@ -107,7 +107,7 @@
             android:id="@+id/SendButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#FF5252"
+            android:background="@color/PrimaryDark"
             android:src="@drawable/send_svgrepo_com"
             android:layout_marginLeft="5dp"
             android:padding="5dp"

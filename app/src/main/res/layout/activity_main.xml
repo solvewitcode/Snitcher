@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:fitsSystemWindows="true"
-    android:background="#FF5252"
+    android:background="@color/PrimaryDark"
     tools:openDrawer="start"
     android:id="@+id/drawerLayout"
     >
@@ -17,7 +17,8 @@
         app:menu="@menu/main_menu"
         android:fitsSystemWindows="true"
         android:layout_gravity="start"
-        android:background="#FF5252"
+        android:background="#540099FF"
+        app:itemTextColor="@color/SecondaryDark"
         android:id="@+id/nav_view"
         >
     </com.google.android.material.navigation.NavigationView>
@@ -32,8 +33,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/black"
-                app:titleTextColor="#FF5252"
-                app:subtitleTextColor="#FF5252"
+                app:titleTextColor="@color/NeutralDark"
+                app:subtitleTextColor="@color/NeutralDark"
                 android:id="@+id/toolbar"/>
         </com.google.android.material.appbar.AppBarLayout>
         <androidx.recyclerview.widget.RecyclerView

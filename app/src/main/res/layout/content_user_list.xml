@@ -6,7 +6,7 @@
 <androidx.cardview.widget.CardView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#570303"
+    android:backgroundTint="#940099FF"
     app:cardCornerRadius="10dp"
     android:layout_margin="10dp"
     app:cardElevation="20dp"
@@ -31,9 +31,9 @@
             android:layout_height="wrap_content"
             android:text="NAME"
             android:textSize="25dp"
-            android:fontFamily="@font/poppins_bold"
+            android:fontFamily="@font/raleway_light"
             android:textStyle="bold"
-            android:textColor="#CD5900"
+            android:textColor="@color/SecondaryDark"
             />
 
     </LinearLayout>

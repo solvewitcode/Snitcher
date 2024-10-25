@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LogInAcitvity"
-    android:background="#000000"
+    android:background="@color/PrimaryDark"
     >
 
     <TextView
@@ -15,12 +15,12 @@
         android:layout_marginTop="4dp"
         android:fontFamily="@font/poppins_bold"
         android:padding="10dp"
-        android:shadowColor="#6DFF0000"
+        android:shadowColor="#AE003AE8"
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="10"
         android:text="Welcome"
-        android:textColor="#7D0000"
+        android:textColor="@color/SecondaryDark"
         android:textSize="60dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,11 +36,11 @@
         android:fontFamily="@font/poppins_bold"
         android:padding="10dp"
         android:text="Log In"
-        android:textColor="#7D0000"
+        android:textColor="@color/SecondaryDark"
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="20"
-        android:shadowColor="#6DFF0000"
+        android:shadowColor="#AE003AE8"
         android:textSize="50dp"
         android:textStyle="bold"
         android:layout_marginBottom="-35dp"
@@ -60,6 +60,7 @@
         android:layout_marginBottom="50dp"
         android:elevation="30dp"
         app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/NeonBlue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -81,7 +82,9 @@
                 android:layout_marginRight="10dp"
                 android:ems="10"
                 android:hint="Email"
-                android:inputType="textEmailAddress">
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/NeutralDark"
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/uemail"
@@ -90,6 +93,7 @@
                     android:inputType="textEmailAddress"
                     android:fontFamily="@font/poppins_light"
                     android:textStyle="bold"
+                    android:textColor="@color/NeutralDark"
                     />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -102,7 +106,9 @@
                 android:layout_marginRight="10dp"
                 android:ems="10"
                 android:hint="Password"
-                android:inputType="textPassword">
+                android:inputType="textPassword"
+                android:textColorHint="@color/NeutralDark"
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/upassword"
@@ -111,6 +117,7 @@
                     android:inputType="textPassword"
                     android:fontFamily="@font/poppins_light"
                     android:textStyle="bold"
+                    android:textColor="@color/NeutralDark"
                     />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -126,7 +133,9 @@
                 android:textStyle="bold"
                 android:elevation="20dp"
                 android:text="Log in"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:textColor="@color/NeutralDark"
+                />
 
             <TextView
                 android:id="@+id/DontHaveAnAccount"

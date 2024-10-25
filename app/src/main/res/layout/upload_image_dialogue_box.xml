@@ -16,61 +16,71 @@
         android:elevation="50dp"
         app:cardCornerRadius="10dp"
         android:id="@+id/imageUploadDialogue"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="#540099FF"
         >
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:textColor="@color/white"
-                android:padding="10dp"
-                android:gravity="center"
                 android:fontFamily="@font/poppins_light"
-                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="10dp"
                 android:text="Select Image From"
+                android:textColor="@color/NeutralDark"
                 android:textSize="30dp"
-                />
+                android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:weightSum="2"
-                android:layout_margin="10dp">
+                android:layout_margin="10dp"
+                android:weightSum="2">
+
                 <Button
+                    android:id="@+id/chooseImageGallery"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Gallery"
-                    android:layout_weight="1"
                     android:layout_margin="5dp"
-                    android:textSize="20dp"
+                    android:layout_weight="1"
                     android:padding="10dp"
-                    android:id="@+id/chooseImageGallery"
+                    android:backgroundTint="#7D0000"
+                    android:text="Gallery"
+                    android:textSize="20dp"
+                    android:textColor="@color/NeutralDark"
                     />
+
                 <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
                     android:id="@+id/chooseImageCamera"
-                android:text="Camera"
-                android:layout_weight="1"
-                android:layout_margin="5dp"
-                android:textSize="20dp"
-                />
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#7D0000"
+                    android:padding="10dp"
+                    android:text="Camera"
+                    android:textColor="@color/NeutralDark"
+                    android:textSize="20dp" />
 
             </LinearLayout>
+
             <Button
+                android:id="@+id/DoneUploadImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Done"
-                android:textSize="20dp"
-                android:id="@+id/DoneUploadImage"
-                android:padding="10dp"
+                android:layout_gravity="center"
                 android:layout_marginBottom="20dp"
-                android:layout_gravity="center"/>
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Done"
+                android:textColor="@color/NeutralDark"
+                android:backgroundTint="#7D0000"
+                android:textSize="20dp" />
         </LinearLayout>
 
 

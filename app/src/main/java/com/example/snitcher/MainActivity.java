@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         toolbar=findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("reVRse"); // Sets "reVRse" as the title on the toolbar
         ActionBarDrawerToggle toggle= new ActionBarDrawerToggle(this,binding.drawerLayout,toolbar,R.string.OpenDrawer,R.string.CloseDrawer);
         binding.drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
@@ -63,6 +64,11 @@ public class MainActivity extends AppCompatActivity {
                 if (id==R.id.myProfile)
                 {
                     Intent intent = new Intent(MainActivity.this,UserProfile.class);
+                    startActivity(intent);
+                }
+                if (id==R.id.vrcontent)
+                {
+                    Intent intent = new Intent(MainActivity.this,dashboard.class);
                     startActivity(intent);
                 }
                     if (id==R.id.settings)

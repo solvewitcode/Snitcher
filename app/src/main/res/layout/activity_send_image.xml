@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".SendImage"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="@color/PrimaryDark"
+    >
 <ImageView
     android:layout_width="match_parent"
     android:layout_height="400dp"
@@ -19,6 +21,7 @@
         android:layout_height="50dp"
         android:text="Send Image"
         android:textSize="20dp"
+        android:backgroundTint="@color/SecondaryDark"
         android:id="@+id/sendImageSendButton"
         />
 

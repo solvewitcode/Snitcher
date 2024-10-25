@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="PrimaryDark">#001f3f</color>
+    <color name="SecondaryDark">#2ecc40</color>
+    <color name="AccentDark">#b10dc9</color>
+    <color name="NeutralDark">#ffffff</color>
+    <color name="NeonBlue">#462979FF</color>
 </resources>
